@@ -95,7 +95,7 @@ def matrix_to_pdb(pdb_file, seq, coord_matrix):
                 third_space = (12 - len("{:.3f}".format(coord_matrix[aa][3*j]))) * " "
                 forth_space = (8 - len("{:.3f}".format(coord_matrix[aa][3*j+1]))) * " "
                 fifth_space = (8 - len("{:.3f}".format(coord_matrix[aa][3*j+2]))) * " "
-                one_letter_code = "UNK" if seq[aa] == "X" else Polypeptide.index_to_three(seq[aa])
+                one_letter_code = "UNK" if seq[aa] == "X" else Polypeptide.one_to_three(seq[aa])
                 if seq[aa] == "G" and backbone[j] == "CB":
                     continue
                 else:
